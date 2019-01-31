@@ -1,5 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+
+// use the line below instead
+// import styled from 'styled-components';
+
+//this line enables babel-plugin-styled-components
+import styled from 'styled-components/macro';
 
 const Title = styled.h1 `
   font-size: 1.5em;
