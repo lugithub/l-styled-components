@@ -106,10 +106,30 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Input2 = styled.input.attrs(({ size }) => ({
+  // we can define static props
+  type: 'password',
+
+  // or we can define dynamic ones
+  margin: size || '1em',
+  padding: size || '1em',
+}))`
+  color: palevioletred;
+  font-size: 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+
+  /* here we use the dynamically computed props */
+  margin: ${props => props.margin};
+  padding: ${props => props.padding};
+`;
+
 export default function App() {
   return (
     <Story>
       <GlobalStyle />
+      <Input2 placeholder="A small text input" size="1em" />
+      <Input2 placeholder="A bigger text input" size="2em" />
       <Title>Hello World!</Title>
       <Button>not primary</Button>
       <Button primary>primary</Button>
