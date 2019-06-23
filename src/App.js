@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-
 //this line enables babel-plugin-styled-components
 import styled, {
   createGlobalStyle,
-  ThemeProvider
+  ThemeProvider,
 } from 'styled-components/macro';
+
+import PanelGroup from './PanelGroup';
 
 // Define our button, but with the use of props.theme this time
 const Button = styled.button`
@@ -21,16 +22,17 @@ const Button = styled.button`
 // We are passing a default theme for Buttons that arent wrapped in the ThemeProvider
 Button.defaultProps = {
   theme: {
-    main: 'palevioletred'
-  }
+    main: 'palevioletred',
+  },
 };
 
 export default function App() {
   const [theme, setTheme] = useState({
-    main: 'mediumseagreen'
+    main: 'mediumseagreen',
   });
   return (
     <>
+      <PanelGroup />
       <Button>Normal</Button>
 
       <ThemeProvider theme={theme}>
