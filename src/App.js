@@ -6,6 +6,8 @@ import styled, {
 } from 'styled-components/macro';
 
 import PanelGroup from './PanelGroup';
+import Parent from './components/Parent';
+import Home from './components/Home';
 
 // Define our button, but with the use of props.theme this time
 const Button = styled.button`
@@ -26,12 +28,22 @@ Button.defaultProps = {
   },
 };
 
+const Dog = Parent(`color: yellow`);
+const Cat = Parent(`color: blue`);
+const Fish = Parent(``);
+
 export default function App() {
   const [theme, setTheme] = useState({
     main: 'mediumseagreen',
   });
   return (
     <>
+      <Home />
+      <div style={{ color: 'green' }}>
+        <Dog />
+        <Cat />
+        <Fish />
+      </div>
       <PanelGroup />
       <Button>Normal</Button>
 
