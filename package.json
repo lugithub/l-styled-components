@@ -13,6 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint:css": "stylelint src/**/*.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -25,6 +26,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "serve": "^10.1.2"
+    "serve": "^10.1.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0"
   }
 }
