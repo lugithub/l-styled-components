@@ -8,6 +8,7 @@ import styled, {
 import PanelGroup from './PanelGroup';
 import Parent from './components/Parent';
 import Home from './components/Home';
+import Bsv4App from './try-bootstrap-styled-v4/Bsv4App';
 
 // Define our button, but with the use of props.theme this time
 const Button = styled.button`
@@ -38,6 +39,7 @@ export default function App() {
   });
   return (
     <>
+      <Bsv4App />
       <Home />
       <div style={{ color: 'green' }}>
         <Dog />
