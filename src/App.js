@@ -9,6 +9,7 @@ import PanelGroup from './PanelGroup';
 import Parent from './components/Parent';
 import Home from './components/Home';
 import Bsv4App from './try-bootstrap-styled-v4/Bsv4App';
+import StyledComp from './try-mixin/mixinExample';
 
 // Define our button, but with the use of props.theme this time
 const Button = styled.button`
@@ -39,6 +40,11 @@ export default function App() {
   });
   return (
     <>
+      <StyledComp>mix in</StyledComp>
+      <StyledComp complex>mix in</StyledComp>
+      <StyledComp complex whiteColor>
+        mix in
+      </StyledComp>
       <Bsv4App />
       <Home />
       <div style={{ color: 'green' }}>
@@ -48,7 +54,6 @@ export default function App() {
       </div>
       <PanelGroup />
       <Button>Normal</Button>
-
       <ThemeProvider theme={theme}>
         <Button
           onClick={() => {
